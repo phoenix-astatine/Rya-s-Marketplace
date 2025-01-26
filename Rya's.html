@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rya's Marketplace - Supporting local vendors and building community connections. Suggest your favorite vendors and explore local businesses!">
+    <meta name="keywords" content="local marketplace, support local vendors, community, small business">
+    <title>Rya's Marketplace</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const images = document.querySelectorAll(".image-carousel img");
+            let currentIndex = 0;
+
+            function switchImage() {
+                const previousIndex = currentIndex;
+                currentIndex = (currentIndex + 1) % images.length;
+
+                images[previousIndex].classList.remove("active");
+                images[previousIndex].classList.add("inactive");
+
+                images[currentIndex].classList.remove("inactive");
+                images[currentIndex].classList.add("active");
+            }
+
+            setInterval(switchImage, 5000);
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Rya's Marketplace</h1>
+        <p>Connecting you with local vendors and strengthening our community.</p>
+    </header>
+
+    <nav>
+        <a href="#vendors">Vendors</a>
+        <a href="#contact">Contact Us</a>
+        <a href="#about">About Us</a>
+    </nav>
+
+    <main>
+        <section>
+            <div class="image-carousel">
+                <img src="./asset/delivery-worker-picking-up-package-from-local-african-market-trader.jpg" alt="Local Vendor 1" class="active">
+                <img src="./asset/close-up-delivery-person-with-parcel.jpg" alt="Local Vendor 2" class="inactive">
+                <img src="./asset/woman-using-computer-credit-card.jpg" alt="Local Vendor 3" class="inactive">
+            </div>
+        </section>
+
+        <section id="vendors" class="section">
+            <h2>Explore Local Vendors</h2>
+            <div class="vendors">
+                <div class="vendor-card">
+                    <h3>Fresh Farm Produce</h3>
+                    <p>Locally grown fruits and vegetables, straight from the farm.</p>
+                </div>
+                <div class="vendor-card">
+                    <h3>Electronics</h3>
+                    <p>All your electronics</p>
+                 <p>at great prices from trusted local vendors.</p>
+                </div>
+                <div class="vendor-card">
+                    <h3>Convenience Store</h3>
+                    <p>Find everyday essentials and unique items at your local convenience store.</p>
+                </div>
+                <div class="vendor-card">
+                    <h3>Local Food Joint</h3>
+                    <p>Unique, handmade items crafted by local artisans.</p>
+                
+                
+                </div>
+            </div>
+        </section>
+
+        <section id="suggest" class="section">
+            <h2>Suggest Your Favorite Vendor</h2>
+            <form>
+                <label for="vendor-name">Vendor Name:</label>
+                <input type="text" id="vendor-name" name="vendor-name" required>
+
+                <label for="vendor-description">Description:</label>
+                <textarea id="vendor-description" name="vendor-description" rows="4" required></textarea>
+
+                <label for="contact-info">Contact Information (optional):</label>
+                <input type="text" id="contact-info" name="contact-info">
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section id="about" class="section">
+            <h2>About Rya's Marketplace</h2>
+            <p>Rya's Marketplace is dedicated to promoting local businesses and creating a space where community members can discover and support vendors in their area. By focusing on local talent and resources, we aim to foster a sense of connection and sustainability.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Rya's Marketplace. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
